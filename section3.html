@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Understanding the TS Compiler</title>
+  </head>
+  <body>
+    <nav>
+        <li><a href="notes.html">Home</a></li>
+        <li><a href="section1.html">Getting started</a></li>
+        <li><a href="section2.html">Using types for better code</a></li>
+        <li><a href="section3.html">Understanding the TS Compiler</a></li>
+        <li><a href="section4.html">TypeScript and ES6</a></li>
+        <li><a href="section5.html">Using classes to create objects</a></li>
+        <li><a href="section6.html">Namespaces and modules</a></li>
+       <li><a href="section7.html">Doing contract work with interfaces</a></li>
+      </nav>
+    <main>
+      <h1 class="udemytitle">Using types for better code</h1>
+
+      <article class="vidrounded">
+        <h3>Does the compiler compile code even if it warns you?</h3>
+        <p>It does compile even if you get an error. It does this because it thinks that you might have another file that you didn’t import yet that will solve the problem.</p>
+      </article>
+
+      <article class="vidrounded">
+          <h3>What does the tsconfig file do? What can you change and what is the effect?</h3>
+          <p>The tsconfig configures how your compiler should behave. You can change it to make it not compile if there is a warning.</p>
+          <p>Other options you can change include:</p>
+            <ul>
+              <li><p>what format you want it to compile in</p></li>
+              <li><p>what version of the compiler you have(es3,es5,es6)</p></li>
+              <li><p>sourceMap true or false (gives access to typescript code in developer tools in the browser) </p></li>
+              <li><p>noImplictAny automatically sets the “any” type to anything that does not have a specific type. If you put it to true then it will give you a warning if you do not put a specific type on something.</p></li>
+            </ul>
+        </article>
+
+        <article class="vidrounded">
+            <h3>Where can you find all the config options?</h3>
+            <p>www.typescriptlang.org/docs/handbook/compiler-options.html</p>
+          </article>
+    </main>
+  </body>
+</html>

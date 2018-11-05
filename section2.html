@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Using types for better code</title>
+  </head>
+  <body>
+    <nav>
+      <li><a href="notes.html">Home</a></li>
+      <li><a href="section1.html">Getting started</a></li>
+      <li><a href="section2.html">Using types for better code</a></li>
+      <li><a href="section3.html">Understanding the TS Compiler</a></li>
+      <li><a href="section4.html">TypeScript and ES6</a></li>
+      <li><a href="section5.html">Using classes to create objects</a></li>
+      <li><a href="section6.html">Namespaces and modules</a></li>
+      <li><a href="section7.html">Doing contract work with interfaces</a></li>
+    </nav>
+    <main>
+      <h1 class="udemytitle">Using types for better code</h1>
+    
+      <article class="vidrounded">
+      <h3>What is the difference between a static typed var and a dynamic typed var?</h3>
+      <p>Static types cannot be changed. Dynamic types can be changed.</p>
+      <h4>Code Example</h4>
+      <p>n/a</p>
+
+      <pre class="excode">
+        <code class="coderounded">
+
+        </code>
+      </pre>
+
+    </article>
+
+    <article class="vidrounded">
+      <h3>How can be be explicit about declaring types?</h3>
+      <p>We can say that this type is a number, string, any, etc.</p>
+      <h4>Code Example</h4>
+      <p>n/a</p>
+
+      <pre class="excode">
+        <code class="coderounded">
+
+        </code>
+      </pre>
+
+    </article>
+
+    <article class="vidrounded">
+      <h3>Show some examples of variables in TS.</h3>
+      <p>n/a</p>
+      <h4>Code Example</h4>
+      <p>n/a</p>
+
+      <pre class="excode">
+        <code class="coderounded">
+            Let myName: string = ‘James’;
+        </code>
+      </pre>
+
+    </article>
+
+    <article class="vidrounded">
+        <h3>What is a tuple?</h3>
+        <p>Arrays with mixed types and limited amount of items.</p>
+        <h4>Code Example</h4>
+        <p>n/a</p>
+  
+        <pre class="excode">
+          <code class="coderounded">
+              Let address: [string, number] = [“Street”,105];
+          </code>
+        </pre>
+  
+      </article>
+
+      <article class="vidrounded">
+          <h3>What is an enum?</h3>
+          <p>It helps make numbers more expressive.</p>
+          <h4>Code Example</h4>
+          <p>n/a</p>
+    
+          <pre class="excode">
+            <code class="coderounded">
+                enum Color { Gray, Blue, Green}
+                let myColor: Color = Color.Green; //1                
+            </code>
+          </pre>
+      </article>
+        
+      <article class="vidrounded">
+            <h3>What is the type any? When should you use it?</h3>
+            <p>The any type lets you put numbers, strings, and or booleans. Try to avoid using it. </p>
+            <h4>Code Example</h4>
+            <p>n/a</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+      
+              </code>
+            </pre>
+        </article>
+
+        <article class="vidrounded">
+           <h3>How do functions use types for inputs and outputs?</h3>
+            <p>If there is a specific type listed on the function it will make sure the output is whatever the type is.</p>
+            <h4>Code Example</h4>
+             <p>n/a</p>
+        
+             <pre class="excode">
+              <code class="coderounded">
+        
+              </code>
+            </pre>
+        
+        </article>    
+
+        <article class="vidrounded">
+            <h3>What is the type of nothing?</h3>
+            <p>void - is put as a type if the function does not return anything.</p>
+            <h4>Code Example</h4>
+            <p>n/a</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+      
+              </code>
+            </pre>
+        </article>
+
+        <article class="vidrounded">
+            <h3>Is NaN a number? (This is so stupid...remember JS was made in 11 days)</h3>
+            <p>It returns NaN when it tries to add or multiple or whatever a number and a string or Boolean or something. (So it's not a number)</p>
+            <h4>Code Example</h4>
+            <p>n/a</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+      
+              </code>
+            </pre>
+        </article>
+
+        <article class="vidrounded">
+            <h3>How do we write a function type?</h3>
+            <p>This lets you say that for the variables that they should only accept numbers and the output should be a number.</p>
+            <h4>Code Example</h4>
+            <p>n/a</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+                  let myMultiple: (val1: number, val2: number) => number;
+              </code>
+            </pre>
+        </article>
+
+        <article class="vidrounded">
+            <h3>How do we write an object type?</h3>
+            <p></p>
+            <h4>Code Example</h4>
+            <p>Declaring the type before the equals sign.</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+                  let userData: {name: string, age: number} = {name: ”James”, age: 27};
+              </code>
+            </pre>
+        </article>
+
+        <article class="vidrounded">
+            <h3>How can we store types, and use its alias?</h3>
+            <p>This is what’s it called a type alias.</p>
+            <h4>Code Example</h4>
+            <p>Then you can just use complex as a alias (instead of copy pasting all the types again just put complex as the type.)</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+                  type Complex = {data: number[], output: (all: boolean) => number[] } 
+
+                  type complex2: Complex = {data: [100,3.99,10], output: function(//whatever the function is)}
+              </code>
+            </pre>
+        </article>
+
+        <article class="vidrounded">
+            <h3>What is a union type?</h3>
+            <p>Let’s you be specific on which types the answer can be.</p>
+            <h4>Code Example</h4>
+            <p>n/a</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+                  let myRealRealAge: number | string = 27; myRealRealAge = “27”;
+              </code>
+            </pre>
+        </article>
+
+        <article class="vidrounded">
+            <h3>Explain why you might use a never type?</h3>
+            <p>If you use never it infers that it never returns.  Example is it running an error. “Never” does not return nothing it's never returning anything.</p>
+            <h4>Code Example</h4>
+            <p>n/a</p>
+      
+            <pre class="excode">
+              <code class="coderounded">
+      
+              </code>
+            </pre>
+        </article>
+    </main>
+  </body>
+</html>

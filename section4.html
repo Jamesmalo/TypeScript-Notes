@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Understanding the TS Compiler</title>
+  </head>
+  <body>
+    <nav>
+        <li><a href="notes.html">Home</a></li>
+        <li><a href="section1.html">Getting started</a></li>
+        <li><a href="section2.html">Using types for better code</a></li>
+        <li><a href="section3.html">Understanding the TS Compiler</a></li>
+        <li><a href="section4.html">TypeScript and ES6</a></li>
+        <li><a href="section5.html">Using classes to create objects</a></li>
+        <li><a href="section6.html">Namespaces and modules</a></li>
+       <li><a href="section7.html">Doing contract work with interfaces</a></li>
+      </nav>
+    <main>
+        <h1 class="udemytitle">TypeScript and ES6</h1>
+
+      <article class="vidrounded">
+        <h3>Which variable declarations are es6 or es5?</h3>
+        <p>let - can change (es6)   const - can not be changed (es6)</p>
+        <h4>Code Example</h4>
+        <p>n/a</p>
+  
+        <pre class="excode">
+          <code class="coderounded">
+  
+          </code>
+        </pre>
+  
+      </article>
+
+      <article class="vidrounded">
+          <h3>Explain block scope. Is "let" block-scoped?</h3>
+          <p>Block-scoped means that the let exists in the function, but has no effect to anything else in the program. Let is block-scoped because it can’t be accessed outside of the function.</p>
+          <h4>Code Example</h4>
+          <p></p>
+    
+          <pre class="excode">
+            <code class="coderounded">
+    
+            </code>
+          </pre>
+    
+        </article>
+        
+      <article class="vidrounded">
+        <h3>What is an arrow function? Why use an arrow function?</h3>
+        <p>=>   Used for 1 line returns and short simple functions.</p>
+        <h4>Code Example</h4>
+        <p></p>
+  
+        <pre class="excode">
+          <code class="coderounded">
+              (Normal function example) const addNumbers = function(number1: number, number2: number): number { return number1 + number2; };
+              (Arrow function example) const addNumbers = (number1: number, number2: number) => number1 * number2;
+          </code>
+        </pre>
+  
+      </article>
+
+      <article class="vidrounded">
+          <h3>Show a few examples of arrow functions, some with an implicit output and somewhere you need to return with curly-brackets. Some with inputs some with no inputs.</h3>
+          <p></p>
+          <h4>Code Example</h4>
+          <p></p>
+    
+          <pre class="excode">
+            <code class="coderounded">
+                const add = function(number1: number, number2: number): number {return number1+number2; };
+
+                const greet = () => {console.log(“hello”)};
+            </code>
+          </pre>
+    
+        </article>
+
+      <article class="vidrounded">
+        <h3>Show an example with default parameters.</h3>
+        <p></p>
+        <h4>Code Example</h4>
+        <p></p>
+  
+        <pre class="excode">
+          <code class="coderounded">
+              const countdown = (start: number = 10): void => { console.log(start); 
+              
+                while (start > 0){ start- -;} 
+              
+              console.log(“Done!”, start); }; 
+              countdown();
+          </code>
+        </pre>
+  
+      </article>
+
+      <article class="vidrounded">
+          <h3>What is a spread operator? Why is it useful?</h3>
+          <p>Allow you to work with arrays and lists of numbers. It spreads out the array into a list of numbers that can be used by a Math.max for example.</p>
+          <h4>Code Example</h4>
+          <p>This is useful because it allows you to flexibly transform arrays without having to write any complicated loops.</p>
+    
+          <pre class="excode">
+            <code class="coderounded">
+                const numbers = [1, 10, 99, -5];
+
+                console.log(Math.max(...numbers)); //returns 99
+            </code>
+          </pre>
+    
+      </article>
+
+      <article class="vidrounded">
+        <h3>How does the compiler determine if the triple dots is a spread operator or a rest operator?</h3>
+        <p>It depends on where you use the triple dots. If it is used to combine variables in the function then it is the rest operator. If it is used when you call the function then it will be used as the spread operator.</p>
+        <h4>Code Example</h4>
+        <p></p>
+  
+        <pre class="excode">
+          <code class="coderounded">
+              function makeArray(name: string, ...args: number[]){ 
+                return args}; 
+              
+              console.log(makeArray(“Joe”, 1,3,5)); //[1,3,5]
+          </code>
+        </pre>
+  
+      </article>
+
+      <article class="vidrounded">
+          <h3>Show examples for destructuring arrays and objects.</h3>
+          <p></p>
+          <h4>Code Example</h4>
+          <p></p>
+    
+          <pre class="excode">
+            <code class="coderounded">
+                const myHobbies = [“Cooking”,”Sports”]; const [hobby1,hobby2] = myHobbies; 
+                console.log(hobby1,hobby2); //Cooking Sports
+
+                const userData = {userName: “Joe”, age: 27}; 
+                const {userName,age} = userData; 
+                console.log(userName,age);
+            </code>
+          </pre>
+    
+      </article>
+
+      <article class="vidrounded">
+          <h3>Which symbols do we use for template literals?</h3>
+          <p></p>
+          <h4>Code Example</h4>
+          <p></p>
+    
+          <pre class="excode">
+            <code class="coderounded">
+                const userName = “Joe”; 
+                const greeting = `This is a string. ${userName} Any more text`; 
+                console.log(greeting) //this can go multiple lines
+            </code>
+          </pre>
+    
+      </article>
+
+      <article class="vidrounded">
+          <h3>How can we insert variables & functions into template variables?</h3>
+          <p></p>
+          <h4>Code Example</h4>
+          <p></p>
+    
+          <pre class="excode">
+            <code class="coderounded">
+                ${*variable name goes here*}
+            </code>
+          </pre>
+    
+      </article>
+    </main>
+  </body>
+</html>
